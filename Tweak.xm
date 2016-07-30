@@ -1,13 +1,10 @@
 #import <UIKit/UIKit.h>
 
-%hook SpringBoard
+%hook SBFLockScreenDateView
 
-- (void)applicationDidFinishLaunching: (id)application {
-	%orig;
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"TEST" message: nil delegate: self cancelButtonTitle: @"OK" otherButtonTitles: nil];
-	[alert show];
-	[alert release];
-	NSLog(@"WC:TEST");
+
+- (void)setCustomSubtitleText:(id)arg1 withColor:(id)arg2 {
+	%orig(@"WeekCount", arg2);
 }
 
 %end
