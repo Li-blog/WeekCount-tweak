@@ -1,20 +1,22 @@
 #import <UIKit/UIKit.h>
-#import "headers/NCDefaultDateLabel.h"
 
-%hook SBFLockScreenDateView
+// %hook SBFLockScreenDateView
 
 
-- (void)setCustomSubtitleText:(id)arg1 withColor:(id)arg2 {
-	%orig(@"WeekCount", arg2);
+// - (void)setCustomSubtitleText:(id)arg1 withColor:(id)arg2 {
+// 	%orig(@"WeekCount", arg2);
+// }
+
+// %end
+
+%hook SBTodayTableHeaderView
+
+- (_Bool)showsLunarDate {
+	return true;
 }
 
-%end
-
-%hook NCDefaultDateLabel
-
-- (void)update {
-	%orig;
-	self.text = @"WeekCount";
+- (id)lunarDateHeaderString {
+	return @"中文测试";
 }
 
 %end
