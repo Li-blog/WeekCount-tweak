@@ -52,9 +52,9 @@ static void preferencesChanged() {
 		[self attemptSettingFallbackPrefs];
 	}
 
-	_startDateStr = preferences[@"StartDateStr"] ? [preferences stringForKey:@"StartDateStr"] : @"19700101";
+	_startDateStr = preferences[@"StartDateStr"] ? preferences[@"StartDateStr"] : @"19700101";
 	_duration = preferences[@"Duration"] ? [(NSNumber*)preferences[@"Duration"] intValue] : 18;
-	_weekStartDay = preferences[@"WeekStartDay"] ? [preferences stringForKey:@"WeekStartDay"] : @"Monday";
+	_weekStartDay = preferences[@"WeekStartDay"] ? preferences[@"WeekStartDay"] : @"Monday";
 	_lockScreenEnabled = preferences[@"LockScreenEnabled"] ? [(NSNumber*)preferences[@"LockScreenEnabled"] boolValue] : YES;
 	_nCEnabled = preferences[@"NCEnabled"] ? [(NSNumber*)preferences[@"NCEnabled"] boolValue] : YES;
 
@@ -66,7 +66,7 @@ static void preferencesChanged() {
 	[fm setDateFormat:@"yyyyMMdd"];
 	NSDate *date1 = [fm dateFromString:_startDateStr];
 	if (date1 == nil) {
-		_startDate = [fm setDateFormat:@"19700101"];
+		_startDate = [fm dateFromString:@"19700101"];
 	}
 	else {
 		_startDate = date1;
@@ -81,3 +81,5 @@ static void preferencesChanged() {
 	_nCEnabled = YES;
 	[self parseDate];
 }
+
+@end
