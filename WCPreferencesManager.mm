@@ -1,4 +1,4 @@
-#import "WCPreferencesManager.h"
+#import "headers/WCPreferencesManager.h"
 
 @interface WCPreferencesManager (Private)
 
