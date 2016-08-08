@@ -61,6 +61,8 @@
 			<string>Duration</string>
 			<key>label</key>
 			<string>Duration</string>
+			<key>PostNotification</key>
+			<string>com.wangjinli.weekcountpb/prefsChanged</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -89,6 +91,8 @@
 			</array>
 			<key>default</key>
 			<string>Monday</string>
+			<key>PostNotification</key>
+			<string>com.wangjinli.weekcountpb/prefsChanged</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -107,6 +111,8 @@
 			<string>LockScreenEnabled</string>
 			<key>default</key>
 			<true/>
+			<key>PostNotification</key>
+			<string>com.wangjinli.weekcountpb/prefsChanged</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -119,6 +125,8 @@
 			<string>NCEnabled</string>
 			<key>default</key>
 			<true/>
+			<key>PostNotification</key>
+			<string>com.wangjinli.weekcountpb/prefsChanged</string>
 		</dict>
 		<dict>
 			<key>cell</key>

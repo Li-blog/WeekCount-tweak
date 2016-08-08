@@ -5,7 +5,7 @@ TARGET = iphone:clang:9.3:8.0
 include theos/makefiles/common.mk
 
 TWEAK_NAME = WeekCount
-WeekCount_FILES = Tweak.xm WCSemester.m
+WeekCount_FILES = Tweak.xm WCSemester.m WCPreferencesManager.mm
 WeekCount_FRAMEWORKS = UIKit
 cWeekCount_PRIVATE_FRAMEWORKS = SpringBoardFoundation
 

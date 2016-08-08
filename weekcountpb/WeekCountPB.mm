@@ -15,6 +15,7 @@
 - (void)_returnKeyPressed:(NSConcreteNotification *)notification {
 	[self.view endEditing:YES];
 	//[super _returnKeyPressed:notification];
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"com.wangjinli.weekcountpb/prefsChanged" object:self];
 }
 @end
 
