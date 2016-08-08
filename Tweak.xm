@@ -20,7 +20,7 @@ NSString *getWeekStr(int weekInt) {
 	NSString *weekStr = getWeekStr(0);
 	NSString *lastWeekStr = getWeekStr(-1);
 	ori = [ori stringByReplacingOccurrencesOfString:weekStr withString:@""];
-	ori = [ori stringByReplacingOccurrencesOfString:lastWeekStr withString:@""];	
+	ori = [ori stringByReplacingOccurrencesOfString:lastWeekStr withString:@""];
 	NSString *totalStr = [weekStr stringByAppendingString:ori];
 	%orig(totalStr, arg2);
 }
