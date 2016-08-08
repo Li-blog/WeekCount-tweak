@@ -17,6 +17,9 @@
 	//[super _returnKeyPressed:notification];
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"com.wangjinli.weekcountpb/prefsChanged" object:self];
 }
+-(void)respring {
+	system("killall -9 SpringBoard");
+}
 @end
 
 // vim:ft=objc
