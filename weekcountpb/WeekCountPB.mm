@@ -1,4 +1,5 @@
 #import <Preferences/Preferences.h>
+#import "NSConcreteNotification.h"
 
 @interface WeekCountPBListController: PSListController {
 }
@@ -10,6 +11,10 @@
 		_specifiers = [[self loadSpecifiersFromPlistName:@"WeekCountPB" target:self] retain];
 	}
 	return _specifiers;
+}
+- (void)_returnKeyPressed:(NSConcreteNotification *)notification {
+	[self.view endEditing:YES];
+	//[super _returnKeyPressed:notification];
 }
 @end
 

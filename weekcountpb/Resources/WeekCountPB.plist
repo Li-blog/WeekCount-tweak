@@ -8,19 +8,123 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>WeekCountPB First Page</string>
+			<string>Semester Setting</string>
+			<key>footerText</key>
+			<string>Make sure your input is in the correct format.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSEditTextCell</string>
+			<key>default</key>
+			<string></string>
+			<key>keyboard</key>
+			<string>numbers</string>
+			<!-- <key>isNumeric</key>
+			<true/> -->
+			<key>placeholder</key>
+			<string>yyyyMMdd (eg. 20160627)</string>
+			<key>defaults</key>
+			<string>com.wangjinli.weekcountpb</string>
+			<key>key</key>
+			<string>StartDateStr</string>
+			<key>label</key>
+			<string>Start Date</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Duration</string>
+			<key>id</key>
+			<string>SliderLabelCell</string>
+			<key>footerText</key>
+			<string>Total weeks in the semester.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>defaults</key>
+			<string>com.wangjinli.weekcountpb</string>
+			<key>min</key>
+			<integer>1</integer>
+			<key>max</key>
+			<integer>30</integer>
+			<key>default</key>
+			<integer>18</integer>
+			<key>showValue</key>
+			<true/>
+			<key>isSegmented</key>
+			<true/>
+			<key>segmentCount</key>
+			<integer>29</integer>
+			<key>key</key>
+			<string>Duration</string>
+			<key>label</key>
+			<string>Duration</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>First Weekday</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSegmentCell</string>
+			<key>defaults</key>
+			<string>com.wangjinli.weekcountpb</string>
+			<key>key</key>
+			<string>WeekStartDay</string>
+			<key>label</key>
+			<string>First Weekday</string>
+			<key>validValues</key>
+			<array>
+				<string>Monday</string>
+				<string>Sunday</string>
+			</array>
+			<key>validTitles</key>
+			<array>
+				<string>Monday</string>
+				<string>Sunday</string>
+			</array>
+			<key>default</key>
+			<string>Monday</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Display Settings</string>
 		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSSwitchCell</string>
-			<key>default</key>
-			<true/>
 			<key>defaults</key>
 			<string>com.wangjinli.weekcountpb</string>
-			<key>key</key>
-			<string>AwesomeSwitch1</string>
 			<key>label</key>
-			<string>Awesome Switch 1</string>
+			<string>Lock Screen</string>
+			<key>key</key>
+			<string>LockScreenEnabled</string>
+			<key>default</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>defaults</key>
+			<string>com.wangjinli.weekcountpb</string>
+			<key>label</key>
+			<string>Notification Center</string>
+			<key>key</key>
+			<string>NCEnabled</string>
+			<key>default</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>© 2016  Li</string>
 		</dict>
 	</array>
 	<key>title</key>
