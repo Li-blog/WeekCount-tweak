@@ -1,0 +1,10 @@
+{
+    entry = {
+	bundle = WeekCountPB;
+	cell = PSLinkCell;
+	detail = WeekCountPBListController;
+	icon = WeekCountPB.png;
+	isController = 1;
+	label = WeekCount;
+    };
+}
