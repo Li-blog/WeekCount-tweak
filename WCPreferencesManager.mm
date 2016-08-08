@@ -57,6 +57,7 @@ static void preferencesChanged() {
 	_weekStartDay = preferences[@"WeekStartDay"] ? preferences[@"WeekStartDay"] : @"Monday";
 	_lockScreenEnabled = preferences[@"LockScreenEnabled"] ? [(NSNumber*)preferences[@"LockScreenEnabled"] boolValue] : YES;
 	_nCEnabled = preferences[@"NCEnabled"] ? [(NSNumber*)preferences[@"NCEnabled"] boolValue] : YES;
+	_displayFormat = preferences[@"DisplayFormat"] ? preferences[@"DisplayFormat"] : @"Week \%W";
 
 	[self parseDate];
 }
@@ -79,6 +80,7 @@ static void preferencesChanged() {
 	_weekStartDay = @"Monday";
 	_lockScreenEnabled = YES;
 	_nCEnabled = YES;
+	_displayFormat = @"Week \%W";
 	[self parseDate];
 }
 

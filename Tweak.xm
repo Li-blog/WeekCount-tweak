@@ -10,7 +10,11 @@ NSString *getWeekStr(int weekInt) {
 	WCSemester *sem = [[WCSemester alloc] initWithStartDate:startDate duration:dur weekStartAt:startDay];
 	NSInteger week = [sem weekNo:[NSDate date]];
 	if (week == -1) { return @""; }
-	else { return [NSString stringWithFormat:@"第 %ld 周 ", (long)week + weekInt]; }
+	else {
+		NSString *display = [WCPreferencesManager sharedManager].displayFormat;
+		display = [display stringByReplacingOccurrencesOfString:@"\%W" withString:[NSString stringWithFormat:@"%ld", (long)week + weekInt]];
+		return [display stringByAppendingString:@" "];
+	}
 }
 
 %group LockScreen

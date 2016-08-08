@@ -6,6 +6,7 @@
 @property (nonatomic, assign, readonly) NSString *startDateStr;
 @property (nonatomic, assign, readonly) NSInteger duration;
 @property (nonatomic, assign, readonly) NSString *weekStartDay;
+@property (nonatomic, assign, readonly) NSString *displayFormat;
 @property (nonatomic, assign, readonly) BOOL lockScreenEnabled;
 @property (nonatomic, assign, readonly) BOOL nCEnabled;
 + (instancetype)sharedManager;
